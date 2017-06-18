@@ -20,13 +20,7 @@ fun todoTask10(): Nothing = TODO(
 fun task10(): List<Int> {
     val arrayList = arrayListOf(1, 5, 2)
     Collections.sort(arrayList, object : Comparator<Int> {
-        override fun compare(o1: Int?, o2: Int?): Int {
-            if (o2 == null || o1 == null) {
-                return 0
-            } else {
-                return o2 - o1
-            }
-        }
+        override fun compare(o1: Int, o2: Int): Int = o2 - o1
     })
     return arrayList
 }
