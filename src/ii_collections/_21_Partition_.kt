@@ -17,6 +17,6 @@ fun Shop.getCustomersWithMoreUndeliveredOrdersThanDelivered(): Set<Customer> {
 
 fun Customer.hasMoreUndeliveredOrdersThanDelivered(): Boolean {
     val (delivered, undelivered) = orders.partition { it.isDelivered }
-    return undelivered.count() > delivered.count()
+    return undelivered.size > delivered.size
 }
 
